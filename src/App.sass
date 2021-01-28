@@ -1,0 +1,212 @@
+*
+  box-sizing: border-box
+  
+html
+  height: 100%
+
+input, button
+  outline: none
+
+body, input, button
+  font-family: 'Arial', sans-serif
+
+body 
+  margin: 0
+  min-height: 100%
+  font-size: 16px
+  position: relative
+  color: #333
+
+h1, h2, h3, h4, h5, h6 
+  margin: 0
+
+input
+  padding: 6px 10px
+  font-size: 16px
+
+button
+  padding: 6px 10px
+  border: none
+  background: #ddd
+  transition: all .4s
+  cursor: pointer
+  &:hover
+    background: #ccc
+
+a
+  color: #333
+  text-decoration: none
+  transition: all .3s
+  &:hover
+    color: #666
+
+section
+  padding: 40px 0
+
+#root 
+  height: 100%
+
+.loader
+  transform: translate(-50%, -50%)
+  position: absolute
+  left: 50%
+  top: 50%
+
+.completed 
+  text-decoration: line-through
+
+.edit
+  display: none
+
+.show 
+  display: block
+
+.hide 
+  display: none
+
+.overlay 
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, .2)
+  position: absolute
+  z-index: 100
+
+.container
+  max-width: 800px
+  padding: 0 20px
+  margin: 0 auto
+
+.modal 
+  width: 600px
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2)
+  background: #fff
+  z-index: 101
+  &__header
+    padding: 14px 20px
+    background: #eee
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    &__close
+      padding: 0 8px
+      font-size: 24px
+      cursor: pointer
+      &:hover
+        color: #888
+  &__content
+    padding: 20px
+    .todos
+      max-height: 300px
+      overflow-y: auto
+      .todo
+        margin-bottom: 16px
+  &__footer
+    padding: 14px 20px
+    border-top: 1px solid #ccc
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    &__save
+      margin-right: 10px
+
+.notes
+  &__not-found
+    color: #888
+
+.note
+  &__content
+    padding-bottom: 8px
+    border-bottom: 1px solid #ddd
+  &__input
+    width: 100%
+  &__home
+    padding-bottom: 8px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid #ddd
+  &__delete
+    padding: 4px 11px
+    background: #eee
+    font-size: 24px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background: #ddd
+  &__read, &__edit
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  &__read
+    span
+      width: 100%
+      padding: 8px 0
+      cursor: default
+      font-weight: bold
+      display: block
+    button
+      padding: 6px 10px
+  &__edit
+    input
+      width: 100%
+
+.header
+  padding: 20px 0
+  background: #eee
+  &__content
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &__button
+      font-size: 16px
+      background: #ccc
+      &:hover
+        background: #ddd
+
+.todos
+  margin: 20px 0
+  padding: 0
+  list-style: none
+  &__not-found
+    margin-bottom: 27px
+    color: #888
+
+.todo
+  &__content
+    margin-bottom: 10px
+  &__read, &__edit
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  &__read
+    span
+      width: 100%
+      padding: 8px 0
+      cursor: pointer
+      display: block
+  &__edit
+    input
+      width: 100%
+  &__delete
+    padding: 4px 11px
+    background: #eee
+    font-size: 24px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background: #ddd
+
+.todo-add
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &__input
+    width: 100%
